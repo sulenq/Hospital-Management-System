@@ -1,0 +1,634 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  --blue: #181F31;
+  --skyBlue: #6bbaff;
+  --pink: #f25287;
+  --white: rgb(243, 243, 243);
+}
+
+.btnq,
+.actionBtn{
+  border: none;
+  border-radius: 50px;
+  background-color: #eaeaea;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin: .25rem;
+}
+
+.disableScroll{
+  overflow: hidden;
+}
+
+.btnq{
+  padding: 10px 20px;
+}
+
+.actionBtn:active,
+.btnq:active{
+  opacity: .8;
+}
+
+.btnq-blue{
+  background-color: var(--blue);
+}
+
+.btnq-pink{
+  background-color: var(--pink);
+}
+
+.btnq-skyBlue{
+  background-color: var(--skyBlue);
+}
+
+html, body{
+  background-color: var(--white);
+  height: 100%;
+}
+
+form > input{
+  height: 5vh;
+  /* width: 100%; */
+  border: none;
+  background-color: #eaeaea;
+  border-radius: 50px;
+  /* margin-top: 1.5rem; */
+  padding: 2vh;
+  outline: none;
+}
+
+.leftIcon{
+  margin-right: 1rem;
+}
+
+.tableContainer{
+  height: 100%;
+  /* background: red; */
+  overflow: auto;
+  width: 100%;
+  z-index: 2;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  /* height: 60vh; */
+  border: none;
+}
+
+table th,
+table td{
+  text-align: left;
+  padding: 1rem 2rem;
+  /* border-bottom: 1px solid var(--blue); */
+}
+
+table th{
+  white-space: nowrap;
+  background-color: var(--blue);
+}
+
+
+td:first-child,
+th:first-child{
+  border-radius: 20px 0 0 20px;
+}
+
+td:last-child,
+th:last-child{
+  border-radius: 0 20px 20px 0;
+}
+
+#patientsTable tr:nth-child(odd){
+  background-color: #eaeaea;
+}
+
+#tableHeader{
+  position: sticky;
+  top: 0;
+  color: white;
+  /* border: 2px solid yellow; */
+
+}
+
+
+
+
+/* LOGIN */
+
+.loginBox{
+  background-color: whitesmoke;
+  height: 80vh;
+  width: 55vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% ,-50%);
+  border-radius: 5%;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginBox > img{
+  width: 10vh;
+  /* margin-top: -2rem; */
+}
+
+.loginBox > h2, .loginBox > h1{
+  color: var(--skyBlue);
+}
+ .loginBox > p{
+  color: var(--pink);
+ }
+
+.loginBox > form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginBox > form > input{
+  width: 100%;
+}
+
+.loginBox > form > input:focus{
+  outline: 2px solid var(--pink);
+}
+
+/* CONTENT */
+.content{
+  height: 90%;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.content .isi{
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  padding: 1rem 2rem;
+  overflow: auto;
+  z-index: 99;
+  color: var(--blue);
+  position: relative;
+}
+
+.content .isi .countersGroup{
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  justify-items: center;
+}
+
+.counters{
+  margin: 1rem;
+  color: var(--white);
+  width: 70%;
+  height: 100px;
+  border-radius: 20px;
+  padding: .5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.counters h1{
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: normal;
+}
+
+.content .isi .outpatients{
+  background-color: var(--blue);
+  background: url('asetoz/outpatients.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.content .isi .doctors{
+  background-color: var(--skyBlue);
+  background: url('asetoz/doctors.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.content .isi .nurses{
+  background-color: var(--pink);
+  background: url('asetoz/nurses.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* SIDE NAV */
+.sidenav{
+  background-color: var(--blue);
+  /* background-color: red; */
+  color: white;
+  width: 55px;
+  padding-top: 55px;
+  height: 100%;
+  border-radius: 0 20px 0 0;
+  position: relative;
+  z-index: 1;
+  transition: .2s;
+}
+
+.sidenav:hover{
+  width: 200px;
+  /* font-size: .9rem; */
+  /* transition: .2s; */
+}
+
+.sidenav:hover p{
+  display: block;
+  /* transition: .5s; */
+}
+
+
+.sidenav > ul > li{
+  position: relative;
+  list-style: none;
+  /* margin-left: .5rem; */
+  margin-top: 0.2rem;
+}
+
+.sidenav > ul > li:hover{
+  /* background: linear-gradient(to right,var(--pink) 10%, var(--white) 10%); */
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: .2s;
+}
+
+.sidenav > ul > li:hover a{
+  color: var(--pink);
+}
+.sidenav > ul > li.active a{
+  background-color: whitesmoke;
+  border-radius: 50px 0 0 50px;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.sidenav > ul > li > a{
+  position: relative;
+  display: block;
+  padding: .75rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.sidenav p{
+  display: none;
+}
+
+/* .sidenav > ul > li:hover a::before,  */
+.sidenav > ul > li.active a::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 20px;
+  box-shadow: 25px 35px 0 1px var(--white);
+}
+
+/* .sidenav > ul > li:hover a::after, */
+.sidenav > ul > li.active a::after  {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 20px;
+  box-shadow: 25px -35px 0 1px var(--white);
+}
+
+.sidenav .logoutBtn{
+  position: absolute;
+  padding: .5rem;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--pink);
+  color: var(--white);
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.sidenav:hover .logoutBtn:active{
+  opacity: .8;
+}
+
+.sidenav .logoutBtn a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav:hover .logoutBtn{
+  width: 110px;
+  /* transition: 1s; */
+}
+
+.sidenav:hover .logoutBtn i{
+  margin-right: .5rem;
+}
+
+/* DASHBOARD */
+.topnav{
+  /* background-color: red; */
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 .5rem;
+}
+
+.topnav > .l > img{
+  width: 5vh;
+  margin-right: auto;
+  /* margin-left: 0; */
+  display: block;
+}
+
+.topnav > .c {
+  width: 50%;
+}
+
+.topnav > .c > form{
+  position: relative;
+}
+
+.topnav > .c > form > input{
+  width: 100%;
+}
+
+.topnav > .c > form > button{
+  height: 5vh;
+  width: 5vh;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: var(--skyBlue);
+  color: white;
+  position: absolute;
+  right: 0;
+  /* padding: 1rem; */
+}
+
+.topnav > .c > form > button:active{
+  opacity: .8;
+}
+
+.topnav > .r{
+  border-radius: 50px;
+  padding: .5vh 2vh;
+  background-color: var(--blue);
+  color: var(--skyBlue);
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.topnav > .r > h3{
+  color: white;
+}
+
+.hr{
+  width: 100%;
+  height: 1px;
+  background-color: var(--blue);
+}
+
+.isi h2{
+  text-decoration: underline;
+}
+
+.modal{
+  height: fit-content;
+  border-radius: 20px;
+  width: 80vh;
+  padding: 1.5rem;
+  position: fixed;
+  background-color: var(--white);
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.modalbg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: .8;
+  display: none;
+}
+
+.patientDetailTable{
+  background-color: var(--white);
+}
+
+.patientDetailTable td{
+  vertical-align: top;
+}
+
+.patientDetailTable th,
+.patientDetailTable td{
+  background-color: transparent;
+}
+
+.modalFull{
+  height: 100%;
+  width: 100%;
+  padding: 3rem 20rem;
+  display: none;
+  position: fixed;
+  background-color: var(--white);
+  right: 0;
+  top: 0;
+  z-index: 3;
+  /* background-color: #dfdfdf; */
+}
+
+.modalFull form .inputControl{
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: space-between; */
+  margin-bottom: 1rem;
+}
+
+.modalFull form .inputControl > input,
+.modalFull form .inputControl > textarea
+{
+  width: 100%;
+  border: 2px solid var(--blue);
+  border-radius: 20px;
+  /* margin-top: 1.5rem; */
+  padding: 5px 10px;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+}
+
+.modalFull form .inputControl textarea{
+  height: 100px;
+}
+
+.modalFull form .inputControl > label{
+  width: 200px;
+  padding-right: 1rem;
+  /* padding-top: 10px; */
+}
+
+
+.inputRadioContainer{
+  width: 100%;
+  padding-left: 1rem;
+}
+
+
+.flex{
+  display: flex;
+}
+
+.flexv{
+  flex-direction: column;
+}
+
+.jcfe{
+  justify-content: flex-end;
+}
+
+.jcc{
+  justify-content: center;
+}
+
+.aic{
+  align-items: center;
+}
+
+.aife{
+  align-items: flex-end;
+}
+
+
+
+
+/* PATIENTS */
+#actionCol{
+  text-align: center;
+  width: 60px; 
+}
+#actionCol:hover .abg{
+  display: flex;
+  transition: .5s;
+}
+
+#patientsTable tr:nth-child(even) #actionCol #moreActionBtn{
+  background-color: var(--white);
+}
+
+.abg{
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+}
+
+#actionCol button {
+  width: 30px;
+  height: 30px;
+  /* padding: 5px; */
+}
+#actionCol #moreActionBtn{
+  color: var(--blue);
+  font-size: 1rem;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+  .content .isi .countersGroup {
+    grid-template-columns: 50% 50%;
+  }
+  .modalFull{
+    padding: 2rem 5rem;
+  }
+  .modal{
+    width: 90%;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .modalFull{
+    padding: 2rem;
+  }
+  body{
+    font-size: .9rem;
+  }
+  .content .isi .countersGroup {
+    grid-template-columns: 100%;
+  }
+  .content .isi .counters{
+    margin: .5rem;
+    width: 80%;
+  }
+  table th,
+  table td{
+  padding: .75rem 1rem;
+  }
+  .content .isi{
+    padding: 1rem;
+  }
+  .sidenav:hover{
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .modalFull{
+    padding: 1.5rem;
+  }
+  
+}
+
+@media screen and (max-width: 350px){
+  .counters h1{
+    font-size: 2.5rem;
+  }
+  .modal{
+    height: 90%;
+    overflow: auto;
+    padding: 1rem;
+  }
+}
+

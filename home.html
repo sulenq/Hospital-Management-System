@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link href="style.css" rel="stylesheet">
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/baaf20a06d.js" crossorigin="anonymous"></script>
+
+  <title>Home</title>
+</head>
+
+<body style="background: var(--white)">
+  <div class="topnav">
+    <div class="l">
+      <img src="asetoz/logo.png">
+    </div>
+    <div class="c">
+      <form action="" name="">
+        <input name="search" type="text" placeholder="Search"> 
+        <button><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+    <div class="r">
+      <h4>Admin</h4>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="sidenav" id="sidenav">
+      <ul>
+        <li id="s1"><a href="home.html"><i class="fas fa-clinic-medical leftIcon"></i>
+            <p>Home</p>
+          </a></li>
+        <li id="s2"><a href="patients.html"><i class="fas fa-users leftIcon"></i>
+            <p>Patients</p>
+          </a></li>
+        <li id="s3"><a><i class="fas fa-stethoscope leftIcon"></i>
+            <p>Doctors</p>
+          </a></li>
+        <li id="s4"><a><i class="fas fa-edit leftIcon"></i>
+            <p>Manage</p>
+          </a></li>
+        <li id="s5"><a><i class="fas fa-scroll leftIcon "></i>
+            <p>Recipes</p>
+          </a></li>
+        <button class="logoutBtn"><a><i class="fas fa-power-off"></i>
+            <p>Sign Out</p>
+          </a></button>
+      </ul>
+    </div>
+    <script>
+      document.getElementById('s1').classList.add('active')
+    </script>
+
+    <div class="isi">
+      <div class="countersGroup">
+        <div class="outpatients counters">
+          <h1 class="counter">1234</h1>
+          <h5>Total Outpatients</h5>
+        </div>
+        <div class="doctors counters">
+          <h1 class="counter">1234</h1>
+          <h5>Total Doctors</h5>
+        </div>
+        <div class="nurses counters">
+          <h1 class="counter">1234</h1>
+          <h5>Total Nurses</h5>
+        </div>
+      </div>
+      <br>
+      <div class="hr"></div>
+      <br>
+      <h2>Outpatients Session</h2>
+      <br>
+      <div class="tableContainer">
+        <table id="dashboardTable">
+          <tr id="tableHeader">
+            <th>Name</th>
+            <th>Day</th>
+            <th>Date</th>
+            <th>Doctor</th>
+            <th>Symptoms</th>
+            <th>Room</th>
+            <th>Status</th>
+          </tr>
+          <!-- loop -->
+          <tr>
+            <td>Jolitos</td>
+            <td>Kamis</td>
+            <td>16 Nov 2022</td>
+            <td>12:00-13:30</td>
+            <td>dr. Sulenq Junior</td>
+            <td>gigi ompong</td>
+            <td>Hidup</td>
+          </tr>
+          <tr>
+            <td>Jolitos</td>
+            <td>Kamis</td>
+            <td>16 Nov 2022</td>
+            <td>12:00-13:30</td>
+            <td>dr. Sulenq Junior</td>
+            <td>gigi ompong</td>
+            <td>Hidup</td>
+          </tr>
+          <tr>
+            <td>Jolitos</td>
+            <td>Kamis</td>
+            <td>16 Nov 2022</td>
+            <td>12:00-13:30</td>
+            <td>dr. Sulenq Junior</td>
+            <td>gigi ompong</td>
+            <td>Hidup</td>
+          </tr>
+          <tr>
+            <td>Jolitos</td>
+            <td>Kamis</td>
+            <td>16 Nov 2022</td>
+            <td>12:00-13:30</td>
+            <td>dr. Sulenq Junior</td>
+            <td>gigi ompong</td>
+            <td>Hidup</td>
+          </tr>
+          <tr>
+            <td>Jolitos</td>
+            <td>Kamis</td>
+            <td>16 Nov 2022</td>
+            <td>12:00-13:30</td>
+            <td>dr. Sulenq Junior</td>
+            <td>gigi ompong</td>
+            <td>Hidup</td>
+          </tr>
+          <tr>
+            <td>Jolitos</td>
+            <td>Kamis</td>
+            <td>16 Nov 2022</td>
+            <td>12:00-13:30</td>
+            <td>dr. Sulenq Junior</td>
+            <td>gigi ompong</td>
+            <td>Hidup</td>
+          </tr>
+          <!-- end loop -->
+        </table>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <script>
+  </script>
+</body>
+
+</html>
